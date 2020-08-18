@@ -1,26 +1,8 @@
 image: node:lts-buster
 
-stages:
-  - build
-  - deploy
-
-cache:
-  key: "$CI_JOB_NAME"
-  paths:
-    - node_modules/
-
-npm:install:
-  stage: build
+eleventy:
   script:
     - npm install
-  only:
-    - master
-
-eleventy:
-  stage: deploy
-  needs:
-    - npm:install
-  script:
     - npx @11ty/eleventy --output=public
   artifacts:
     paths:
