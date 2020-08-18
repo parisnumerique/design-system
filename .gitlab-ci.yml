@@ -17,7 +17,7 @@ npm:install:
     - master
 
 eleventy:
-  stage: build
+  stage: deploy
   needs:
     - npm:install
   script:
