@@ -14,7 +14,7 @@ eleventy:
     - npx @11ty/eleventy
   artifacts:
     paths:
-      - public
+      - _site
   only:
     - master
 
