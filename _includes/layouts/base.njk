@@ -1,26 +1,13 @@
 <html>
   <head>
-    <title>Eleventy + Netlify CMS from scratch</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <title>Eleventy + Gitlab Pages</title>
   </head>
 
   <body>
     <h1>
-      Eleventy + Netlify CMS from scratch
+      Eleventy + Gitlab Pages
     </h1>
     {{ content | safe }}
-
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
   </body>
 
 </html>
