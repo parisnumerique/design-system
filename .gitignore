@@ -1,3 +1,6 @@
-_site/
-node_modules/
-package-lock.json
+# 11ty
+11ty/_site/
+11ty/node_modules/
+11ty/package-lock.json
+
+# bridgetown
