@@ -23,8 +23,11 @@ timezone: Europe/Paris
 
 # ENVIRONMENT SPECIFIC
 github:
-  baseurl: "/design-system"
+  baseurl: "design-system"
   url: "https://parisnumerique.github.io"
+  collections:
+    docs:
+      permalink: /design-system/:path
 
 
 # DEFAULTS
