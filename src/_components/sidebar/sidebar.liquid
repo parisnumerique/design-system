@@ -1,0 +1,39 @@
+<aside>
+  <input type="text">
+  <nav>
+    <ul>
+      {% assign current_category = "" %}
+      {% assign current_subcategory = "" %}
+
+      {% for doc_page in docs %}
+        {% assign active = "" %}
+        {% assign modifier = "" %}
+
+        {% if doc_page.url == page.url %}
+          {% assign active = "is-active" %}
+        {% endif %}
+
+        {% if current_category != doc_page.category %}
+          {% assign current_category = doc_page.category %}
+          {% assign modifier = "list-head" %}
+        {% endif %}
+
+        {% if current_subcategory != "" and current_subcategory != doc_page.subcategory %}
+          {% assign current_subcategory = "" %}
+            </ul>
+          </li>
+        {% endif %}
+
+        <li class="{{ modifier }}">
+          <a href="{{ doc_page.url }}" class="{{ active }}">{{ doc_page.title }}</a>
+
+          {% if doc_page.subcategory and current_subcategory != doc_page.subcategory %}
+            {% assign current_subcategory = doc_page.subcategory %}
+            <ul>
+          {% else %}
+          </li>
+          {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>

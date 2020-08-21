@@ -1,3 +1,3 @@
+import "normalize.css";
+import "typeface-montserrat";
 import "../styles/index.scss"
-
-console.info("Bridgetown is loaded!")
