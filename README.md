@@ -26,6 +26,11 @@ Trigerring deployement to DSIN server should be provided.
 
 A Github Action is set to build & deploy the static site to [https://parisnumerique.github.io/design-system](https://parisnumerique.github.io/design-system) on any commit to `master` branch.
 
-:warning: _Bridgetown isn't dealing with `baseurl` configuration properly, leading to a broken version a the static site deployed_ :warning:
+:warning: _Bridgetown isn't dealing with `baseurl` configuration properly, leading to a broken version of the static site deployed_ :warning:
 
+### Netlify
 
+Deploying to Netlify allow us not to change `url` and `baseurl` config. Hence, the static site deployed is identical to the one run in local.
+
+Deployment is automated by a push to the following Gitlab repo : [acekat/design-system](https://gitlab.com/acekat/design-system)
+Live site can be reached there : [https://gifted-kowalevski-3acc6c.netlify.app](https://gifted-kowalevski-3acc6c.netlify.app)
