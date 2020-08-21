@@ -21,14 +21,6 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.com
 permalink: simple
 timezone: Europe/Paris
 
-# ENVIRONMENT SPECIFIC
-github:
-  baseurl: "design-system"
-  url: "https://parisnumerique.github.io"
-  collections:
-    docs:
-      permalink: /design-system/:path
-
 
 # DEFAULTS
 
@@ -54,3 +46,9 @@ collections:
 # https://github.com/andrewmcodes/bridgetown-inline-svg
 # svg:
 #   optimize: true
+
+
+# ENVIRONMENT SPECIFIC
+github:
+  baseurl: "/design-system"
+  url: "https://parisnumerique.github.io"

@@ -5,7 +5,7 @@
       {% assign current_category = "" %}
       {% assign current_subcategory = "" %}
 
-      {% for doc_page in docs %}
+      {% for doc_page in site.docs %}
         {% assign active = "" %}
         {% assign modifier = "" %}
 
@@ -25,7 +25,7 @@
         {% endif %}
 
         <li class="{{ modifier }}">
-          <a href="{{ doc_page.url }}" class="{{ active }}">{{ doc_page.title }}</a>
+          <a href="{{ doc_page.url | prepend: site.baseurl }}" class="{{ active }}">{{ doc_page.title }}</a>
 
           {% if doc_page.subcategory and current_subcategory != doc_page.subcategory %}
             {% assign current_subcategory = doc_page.subcategory %}
