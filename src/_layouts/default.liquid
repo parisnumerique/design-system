@@ -21,7 +21,7 @@
     <script src="{% webpack_path js %}" defer></script>
   </head>
   <body class="{{ page.layout }} {{ page.page_class }}">
-    {% render "header/header", metadata: site.metadata, page: page %}
+    {% render "header/header", site: site, page: page %}
     {% render "sidebar/sidebar", site: site, page: page %}
 
     <main>
