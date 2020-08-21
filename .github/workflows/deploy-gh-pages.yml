@@ -15,3 +15,5 @@ jobs:
         uses: andrewmcodes/bridgetown-gh-pages-action@v0.0.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          BRIDGETOWN_ENV: github
