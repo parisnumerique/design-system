@@ -1,8 +1,14 @@
 <header class="pds-header">
-  <a href="https://paris.fr">
-    {% svg assets/svgs/paris-logo.svg %}
-  </a>
-  <a href="{{ site.baseurl }}">
-    {{ site.metadata.title }}
-  </a>
+  <button type="button" class="pds-header-button-menu">
+    <span class="is-only-readable">Menu</span>
+    <span class="pds-header-button-menu-line"></span>
+  </button>
+  <div class="pds-header-brand">
+    <a href="https://paris.fr" class="pds-header-brand-paris">
+      {% svg assets/svgs/paris-logo.svg %}
+    </a>
+    <a href="{{ site.baseurl }}" class="pds-header-brand-site">
+      {{ site.metadata.title }}
+    </a>
+  </div>
 </header>

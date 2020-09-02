@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box; // natural box layout model to all elements
+  font-size: 62.5%; // for easy rem sizing: 1rem = 10px
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: rgba($paris-blue, 0.3);
+}
+
+body {
+  color: $paris-primary;
+  display: flex;
+  font-family: $paris-font;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: normal;
+}

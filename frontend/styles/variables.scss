@@ -16,8 +16,17 @@ $paris-orange: #FF3300;
 $paris-green: #3ECD2E;
 $paris-gray: #F0F0F0;
 
+$paris-primary-invert: #FFFFFF;
 
 /////////////////////////
 // PARIS DESIGN SYSTEM //
 /////////////////////////
 
+// mediaqueries
+$pds-mobile: unquote("max-width: 768px");
+$pds-tablet: unquote("min-width: 769px) and (max-width: 1023px");
+$pds-desktop: unquote("min-width: 769px");
+
+// components
+$pds-header-height: 5.6rem;
+$pds-sidebar-width: 32rem;
