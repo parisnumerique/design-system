@@ -69,7 +69,7 @@
         display: block;
         height: 0.3rem;
         position: relative;
-        transition: all 0.1s ease;
+        transition: all 0.3s ease;
         width: 2.2rem;
       }
 
@@ -81,6 +81,21 @@
 
       &-line::before { top: -0.7rem; }
       &-line::after { bottom: -0.7rem; }
+    }
+
+    &.has-mobile-sidebar-open {
+      .pds-header-button-menu-line {
+        background: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        &::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
 

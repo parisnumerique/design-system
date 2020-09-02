@@ -20,4 +20,8 @@ body {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: normal;
+
+  &.has-disabled-scroll {
+    overflow: hidden;
+  }
 }
