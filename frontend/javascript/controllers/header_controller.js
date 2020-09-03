@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ["nav"];
+  // static targets = ["nav"];
 
   initialize() {
     this.timeout = false;

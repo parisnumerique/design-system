@@ -2,7 +2,6 @@
   background: $paris-primary;
   color: $paris-primary-invert;
   display: flex;
-  height: $pds-header-height;
   position: fixed;
   top: 0;
   width: 100%;
@@ -12,7 +11,6 @@
     align-items: center;
     display: flex;
     flex-grow: 1;
-    justify-content: center;
 
     &-paris {
       display: flex;
@@ -22,12 +20,13 @@
       position: relative;
 
       &::after {
-        $divider-height: 70%;
+        $divider-height: 60%;
 
         background: $paris-primary-invert;
         content: "";
         display: block;
         height: $divider-height;
+        opacity: .7;
         position: absolute;
         right: 0;
         top: (100% - $divider-height) / 2;
@@ -42,14 +41,17 @@
 
     &-site {
       color: inherit;
+      opacity: .7;
       text-decoration: none;
     }
   }
 
   @media ($pds-mobile) {
+    height: $pds-header-height-mobile;
 
     &-brand {
-      margin-right: $pds-header-height;
+      justify-content: center;
+      margin-right: $pds-header-height-mobile;
     }
 
     &-button-menu {
@@ -58,9 +60,9 @@
       border: none;
       display: flex;
       flex-shrink: 0;
-      height: $pds-header-height;
+      height: $pds-header-height-mobile;
       justify-content: center;
-      width: $pds-header-height;
+      width: $pds-header-height-mobile;
 
       &-line,
       &-line::before,
@@ -100,7 +102,13 @@
   }
 
   @media ($pds-desktop) {
+    height: $pds-header-height-desktop;
+    padding: 0 $pds-sidebar-padding;
     width: $pds-sidebar-width;
+
+    &-brand {
+      justify-content: flex-start;
+    }
 
     &-button-menu {
       display: none;

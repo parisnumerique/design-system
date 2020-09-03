@@ -1,6 +1,6 @@
 <aside class="pds-sidebar">
-  <input type="text">
-  <nav>
+  <input type="text" class="pds-sidebar-search" placeholder="Rechercher">
+  <nav class="pds-sidebar-nav">
     <ul>
       {% assign current_category = "" %}
       {% assign current_subcategory = "" %}
@@ -24,11 +24,19 @@
           </li>
         {% endif %}
 
-        <li class="{{ modifier }}">
-          <a href="{{ doc_page.url | prepend: site.baseurl }}" class="{{ active }}">{{ doc_page.title }}</a>
+        {% if doc_page.subcategory and current_subcategory != doc_page.subcategory %}
+          {% assign current_subcategory = doc_page.subcategory %}
+          {% assign modifier = "sublist-head" %}
 
-          {% if doc_page.subcategory and current_subcategory != doc_page.subcategory %}
-            {% assign current_subcategory = doc_page.subcategory %}
+          {% if doc_page.subcategory == page.subcategory %}
+            {% assign modifier = modifier | append: " is-sublist-active" %}
+          {% endif %}
+        {% endif %}
+
+        <li class="{{ modifier }}">
+          <a href="{{ doc_page.url | prepend: site.baseurl }}" class="pds-sidebar-nav-link {{ active }}">{{ doc_page.title }}</a>
+
+          {% if modifier contains "sublist-head" %}
             <ul>
           {% else %}
           </li>

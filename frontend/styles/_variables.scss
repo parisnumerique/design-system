@@ -28,5 +28,7 @@ $pds-tablet: unquote("min-width: 769px) and (max-width: 1023px");
 $pds-desktop: unquote("min-width: 769px");
 
 // components
-$pds-header-height: 5.6rem;
+$pds-header-height-mobile: 5.6rem;
+$pds-header-height-desktop: 8.1rem;
 $pds-sidebar-width: 32rem;
+$pds-sidebar-padding: 3rem;
