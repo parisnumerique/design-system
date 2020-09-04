@@ -45,5 +45,6 @@ main {
 
   @media ($pds-desktop) {
     margin-left: $pds-sidebar-width;
+    max-width: 80rem;
   }
 }

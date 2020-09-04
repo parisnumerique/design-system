@@ -4,7 +4,7 @@
   color: $paris-primary-invert;
   display: flex;
   font-weight: 300;
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 997;
 
@@ -51,9 +51,7 @@
     flex-direction: column;
     text-align: center;
 
-    &-brand {
-      // text-align: center;
-    }
+    &-brand {}
 
     &-nav {
       flex-direction: column-reverse;
