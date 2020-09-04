@@ -14,6 +14,10 @@ html {
 }
 
 body {
+  background-color: $paris-blue;
+  background-image: url(/assets/svgs/nef.svg);
+  background-repeat: no-repeat;
+  background-size: 75%;
   color: $paris-primary;
   font-family: $paris-font;
   font-size: 1.6rem;
@@ -22,5 +26,24 @@ body {
 
   &.has-disabled-scroll {
     overflow: hidden;
+  }
+
+  @media ($pds-mobile) {
+    background-position: top -4rem right -2rem;
+  }
+
+  @media ($pds-desktop) {
+    background-position: top -27rem right -6rem;
+  }
+}
+
+main {
+
+  @media ($pds-mobile) {
+    margin-top: $pds-header-height-mobile;
+  }
+
+  @media ($pds-desktop) {
+    margin-left: $pds-sidebar-width;
   }
 }
