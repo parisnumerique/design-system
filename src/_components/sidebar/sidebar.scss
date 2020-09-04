@@ -2,11 +2,10 @@
   background: $paris-primary;
   color: $paris-primary-invert;
   display: block;
-  height: 100%;
   max-width: $pds-sidebar-width;
+  overflow: auto;
   padding: 0rem $pds-sidebar-padding;
-  padding-bottom: $pds-sidebar-padding;
-  position: relative;
+  position: fixed;
   top: $pds-header-height-desktop;
   z-index: 998;
 
@@ -29,7 +28,7 @@
   }
 
   &-nav {
-    padding-top: 3rem;
+    padding: $pds-sidebar-padding 0;
 
     ul {
       list-style: none;
@@ -49,7 +48,7 @@
         }
 
         &.sublist-head::before {
-          $sublist-head-arrow-border: 0.15rem solid $paris-primary-invert;;
+          $sublist-head-arrow-border: 0.1rem solid $paris-primary-invert;;
 
           background: transparent;
           border-top: $sublist-head-arrow-border;
@@ -94,8 +93,9 @@
 
   @media ($pds-mobile) {
     left: 0;
+    height: calc(100vh - #{$pds-header-height-mobile});
     padding-top: 2rem;
-    position: fixed;
+    padding-bottom: $pds-sidebar-padding;
     top: $pds-header-height-mobile;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -107,6 +107,11 @@
   }
 
   @media ($pds-desktop) {
+    height: calc(100vh - #{$pds-header-height-desktop});
     width: $pds-sidebar-width;
+
+    &-nav {
+      padding-bottom: 14rem;
+    }
   }
 }
