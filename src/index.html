@@ -2,8 +2,42 @@
 layout: default
 ---
 
-{% render "blocks/title/title", title: "Hamoniser les interfaces", subtitle: "de la Ville de Paris", level: 2 %}
-{% render "blocks/text/text", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique maximus ex, id laoreet tortor fringilla nec. Integer tempor orci a rhoncus semper. Cras et commodo neque. Cras efficitur enim a lorem facilisis imperdiet. Duis a eros tincidunt, efficitur erat sed, convallis dui. Phasellus in leo feugiat, dapibus augue eu, posuere elit. Phasellus in lectus id odio aliquet aliquam vel in nulla. Cras eleifend interdum sapien at euismod. Integer id eleifend ligula, et aliquam metus. Morbi ultricies mattis lacus vitae mollis. In mattis mi in felis tristique ullamcorper. " %}
-{% render "blocks/title/title", title: "Les ressources les plus utilisées", level: 3 %}
-{% render "blocks/text/text", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique maximus ex, id laoreet tortor fringilla nec. Integer tempor orci a rhoncus semper. Cras et commodo neque. Cras efficitur enim a lorem facilisis imperdiet. Duis a eros tincidunt, efficitur erat sed, convallis dui. Phasellus in leo feugiat, dapibus augue eu, posuere elit. Phasellus in lectus id odio aliquet aliquam vel in nulla. Cras eleifend interdum sapien at euismod. Integer id eleifend ligula, et aliquam metus. Morbi ultricies mattis lacus vitae mollis. In mattis mi in felis tristique ullamcorper. " %}
+{% render "content/title/title", text: "Hamoniser les interfaces", subtitle: "de la Ville de Paris", level: 2 %}
+
+{% rendercontent "content/layouts/container" %}
+  {% rendercontent "content/layouts/column" %}
+    {% rendercontent "content/text/text", modifiers: "lead-text" %}
+      Adapter les services et la communication avec la marque, diffuser l'expertise et apprendre de l'expérience de toutes les équipes, faciliter la collaboration et éviter de recréer ce qui esxiste.
+    {% endrendercontent %}
+  {% endrendercontent %}
+  {% rendercontent "content/layouts/column" %}
+    {% rendercontent "content/text/text", modifiers: "small-text" %}
+      Le Design System de la Ville de Paris est à destination de toute personne amenée à créer, concevoir, dessiner, développer ou travailler avec la marque de la Ville de Paris&nbsp;: agents, prestataires partenaires, associations, entreprises, particuliers. Il mutualise et rend accessible les recherches et compétences partagées au sein de la Ville, et est amélioré et maintenu en continu.
+
+      Il propose des ressources et outils pour harmoniser les utilisations de la marque, et faciliter la création d'éléments de communication et interfaces web, dans le but de proposer des expériences cohérentes, facilitantes, agréables, efficaces et accessibles à tous les utilisateurs des services de la Ville.
+    {% endrendercontent %}
+  {% endrendercontent %}
+{% endrendercontent %}
+
+{% render "content/title/title", text: "Les ressources les plus utilisées", level: 3 %}
+
+{% rendercontent "content/layouts/container" %}
+  <em>TBD</em>
+{% endrendercontent %}
+
+{% render "content/title/title", text: "Suivi et participation", level: 3 %}
+
+{% rendercontent "content/layouts/container" %}
+  {% rendercontent "content/layouts/column" %}
+    {% rendercontent "content/text/text", modifiers: "bold-text", icon: "bulb" %}
+      Le Design System de la Ville de Paris est maintenu pas des agents issus de directions différentes.
+    {% endrendercontent %}
+  {% endrendercontent %}
+  {% rendercontent "content/layouts/column" %}
+    {% rendercontent "content/text/text", modifiers: "blue-text" %}
+      Il est participatif&nbsp;: vous pouvez proposer des idées, améliorations et suggestions.
+      {% render "content/button/button", text: "Je participe", modifiers: "action-button" %}
+    {% endrendercontent %}
+  {% endrendercontent %}
+{% endrendercontent %}
 

@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box; // natural box layout model to all elements
   font-size: 62.5%; // for easy rem sizing: 1rem = 10px
+  height: 100%;
 }
 
 *,
@@ -14,15 +15,17 @@ html {
 }
 
 body {
-  background-color: $paris-blue;
   background-image: url(/assets/svgs/nef.svg);
   background-repeat: no-repeat;
   background-size: 75%;
   color: $paris-primary;
+  display: flex;
+  flex-direction: column;
   font-family: $paris-font;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: normal;
+  height: 100%;
 
   &.has-disabled-scroll {
     overflow: hidden;
@@ -38,6 +41,7 @@ body {
 }
 
 main {
+  flex: 1 0 auto;
 
   @media ($pds-mobile) {
     margin-top: $pds-header-height-mobile;

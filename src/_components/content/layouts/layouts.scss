@@ -1,0 +1,9 @@
+.pds-block {
+  display: flex;
+
+  .pds-column {
+    display: block;
+    flex: 1 1 0;
+    padding: 0 1.5rem;
+  }
+}

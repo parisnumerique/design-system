@@ -2,46 +2,46 @@
   <input type="text" class="pds-sidebar-search" placeholder="Rechercher">
   <nav class="pds-sidebar-nav">
     <ul>
-      {% assign current_category = "" %}
-      {% assign current_subcategory = "" %}
+      {%- assign current_category = "" -%}
+      {%- assign current_subcategory = "" -%}
 
-      {% for doc_page in site.docs %}
-        {% assign active = "" %}
-        {% assign modifier = "" %}
+      {%- for doc_page in site.docs -%}
+        {%- assign active = "" -%}
+        {%- assign modifier = "" -%}
 
-        {% if doc_page.url == page.url %}
-          {% assign active = "is-active" %}
-        {% endif %}
+        {%- if doc_page.url == page.url -%}
+          {%- assign active = "is-active" -%}
+        {%- endif -%}
 
-        {% if current_category != doc_page.category %}
-          {% assign current_category = doc_page.category %}
-          {% assign modifier = "list-head" %}
-        {% endif %}
+        {%- if current_category != doc_page.category -%}
+          {%- assign current_category = doc_page.category -%}
+          {%- assign modifier = "list-head" -%}
+        {%- endif -%}
 
-        {% if current_subcategory != "" and current_subcategory != doc_page.subcategory %}
-          {% assign current_subcategory = "" %}
+        {%- if current_subcategory != "" and current_subcategory != doc_page.subcategory -%}
+          {%- assign current_subcategory = "" -%}
             </ul>
           </li>
-        {% endif %}
+        {%- endif -%}
 
-        {% if doc_page.subcategory and current_subcategory != doc_page.subcategory %}
-          {% assign current_subcategory = doc_page.subcategory %}
-          {% assign modifier = "sublist-head" %}
+        {%- if doc_page.subcategory and current_subcategory != doc_page.subcategory -%}
+          {%- assign current_subcategory = doc_page.subcategory -%}
+          {%- assign modifier = "sublist-head" -%}
 
-          {% if doc_page.subcategory == page.subcategory %}
-            {% assign modifier = modifier | append: " is-sublist-active" %}
-          {% endif %}
-        {% endif %}
+          {%- if doc_page.subcategory == page.subcategory -%}
+            {%- assign modifier = modifier | append: " is-sublist-active" -%}
+          {%- endif -%}
+        {%- endif -%}
 
         <li class="{{ modifier }}">
           <a href="{{ doc_page.url | prepend: site.baseurl }}" class="pds-sidebar-nav-link {{ active }}">{{ doc_page.title }}</a>
 
-          {% if modifier contains "sublist-head" %}
+          {%- if modifier contains "sublist-head" %}
             <ul>
-          {% else %}
+          {%- else -%}
           </li>
-          {% endif %}
-      {% endfor %}
+          {%- endif -%}
+      {%- endfor -%}
     </ul>
   </nav>
 </aside>

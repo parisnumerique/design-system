@@ -7,7 +7,10 @@
     <a href="https://paris.fr" class="pds-header-brand-paris">
       {% svg assets/svgs/paris-logo.svg %}
     </a>
-    <a href="{{ site.baseurl }}" class="pds-header-brand-site">
+    {%- capture home_href -%}
+      {%- if site.baseurl != "" -%}{{ site.baseurl }}{%- else -%}/{%- endif -%}
+    {%- endcapture -%}
+    <a href="{{ home_href }}" class="pds-header-brand-site">
       {{ site.metadata.title }}
     </a>
   </div>

@@ -26,7 +26,6 @@
         content: "";
         display: block;
         height: $divider-height;
-        opacity: .7;
         position: absolute;
         right: 0;
         top: (100% - $divider-height) / 2;
@@ -41,7 +40,6 @@
 
     &-site {
       color: inherit;
-      opacity: .7;
       text-decoration: none;
     }
   }
