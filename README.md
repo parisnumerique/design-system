@@ -32,4 +32,4 @@ Deploying to Netlify allow us not to change `url` and `baseurl` config. Hence, t
 
 Deployment is automated by a push to the following Gitlab repo : [acekat/design-system](https://gitlab.com/acekat/design-system)
 
-Live site can be reached there : [https://gifted-kowalevski-3acc6c.netlify.app](https://gifted-kowalevski-3acc6c.netlify.app)
+Live site can be reached there : [https://paris-design-system.netlify.app/](https://paris-design-system.netlify.app/)
