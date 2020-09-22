@@ -4,13 +4,10 @@
     <span class="pds-header-button-menu-line"></span>
   </button>
   <div class="pds-header-brand">
-    <a href="https://paris.fr" class="pds-header-brand-paris">
+    <a href="{{ site.metadata.paris-url }}" class="pds-header-brand-paris">
       {% svg assets/svgs/paris-logo.svg %}
     </a>
-    {%- capture home_href -%}
-      {%- if site.baseurl != "" -%}{{ site.baseurl }}{%- else -%}/{%- endif -%}
-    {%- endcapture -%}
-    <a href="{{ home_href }}" class="pds-header-brand-site">
+    <a href="{{ "/" | relative_url }}" class="pds-header-brand-site">
       {{ site.metadata.title }}
     </a>
   </div>

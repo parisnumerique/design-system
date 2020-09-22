@@ -5,10 +5,9 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: Design System
+organisation: Ville de Paris
 
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+description: >- # this means to ignore newlines until next entry
+  Adapter les services et la communication avec la marque, diffuser l'expertise et apprendre de l'expérience de toutes les équipes, faciliter la collaboration et éviter de recréer ce qui esxiste.
 
-
-paris-title: Ville de Paris
 paris-url: https://www.paris.fr

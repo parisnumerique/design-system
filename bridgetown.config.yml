@@ -49,8 +49,8 @@ collections:
 
 # ENVIRONMENT SPECIFIC
 github:
-  baseurl: "/design-system"
   url: "https://parisnumerique.github.io"
+  baseurl: "design-system"
 
 netlify:
   url: "https://gifted-kowalevski-3acc6c.netlify.app"

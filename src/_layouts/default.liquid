@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {% capture page_title %}
-      {{ page.title | strip_html | strip_newlines }}
+      {{- page.title | strip_html | strip_newlines -}}
     {% endcapture %}
     <title>
-      {% if page_title != "" %}
-        {{ page_title | escape }} | {{ site.metadata.title | escape }}
-      {% else %}
-        {{ site.metadata.title | escape }}: {{ site.metadata.tagline | escape }}
-      {% endif %}
+      {%- if page_title != "" -%}
+        {{ page_title | escape }}, {{ site.metadata.title | escape }} - {{ site.metadata.organisation | escape }}
+      {%- else -%}
+        {{ site.metadata.title | escape }} - {{ site.metadata.organisation | escape }}
+      {%- endif -%}
     </title>
 
     <meta name="description" content="{{ site.metadata.description }}" />
@@ -28,6 +28,6 @@
       {{ content }}
     </main>
 
-    {% render "footer/footer", metadata: site.metadata %}
+    {% render "footer/footer", site: site %}
   </body>
 </html>

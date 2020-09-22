@@ -34,7 +34,7 @@
         {%- endif -%}
 
         <li class="{{ modifier }}">
-          <a href="{{ doc_page.url | prepend: site.baseurl }}" class="pds-sidebar-nav-link {{ active }}">{{ doc_page.title }}</a>
+          <a href="{{ doc_page.url | relative_url }}" class="pds-sidebar-nav-link {{ active }}">{{ doc_page.title }}</a>
 
           {%- if modifier contains "sublist-head" %}
             <ul>
