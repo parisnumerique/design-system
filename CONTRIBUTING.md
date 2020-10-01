@@ -12,3 +12,18 @@ Le projet est configuré pour qu'à chaque modification enregistrée, le site es
 ### Rédaction du contenu
 
 Le contenu se rédige en [markdown](https://kramdown.gettalong.org/quickref.html) ou avec du code html directement. Il y a aussi la possibilité d'utiliser des composants de mise en page, proposés dans une bibliothèque de composants.
+
+```
+# Hamoniser les interfaces de la Ville de Paris
+
+Adapter les services et la communication avec la marque, diffuser l'expertise et apprendre de l'expérience de toutes les équipes, faciliter la collaboration et éviter de recréer ce qui esxiste.
+
+{% rendercontent "content/layouts/container" %}
+  {% rendercontent "content/layouts/column" %}
+    Le Design System de la Ville de Paris est maintenu pas des agents issus de directions différentes.
+  {% endrendercontent %}
+  {% rendercontent "content/layouts/column" %}
+    Il est participatif&nbsp;: vous pouvez proposer des idées, améliorations et suggestions.
+  {% endrendercontent %}
+{% endrendercontent %}
+```
